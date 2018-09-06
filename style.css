@@ -1,0 +1,47 @@
+
+
+ svg {
+     width: 700px;
+     height: 700px;
+ }   
+
+ #board {
+     display: flex;
+     justify-content: center;
+ }
+
+ button {
+     text-align: center;
+ }
+
+
+
+ /* button {
+     height: 30px;
+     width: 60px;
+     position: absolute;
+     left: 52%;
+     top: 91%;
+     font-size: 15px;
+ }
+
+ h2 {
+     position: absolute;
+     left: 44%;
+     top: 10%;
+ }
+
+ h1 {
+     position: absolute;
+     left: 45%;
+     top: 15%;
+     font-size: 40px;
+    
+ }
+ #board {
+     display: flex;
+     flex-flow: column nowrap;
+     align-items: center;
+     justify-content: center
+ } */
+
