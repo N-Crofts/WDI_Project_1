@@ -4,7 +4,7 @@ let gameBoard = []
 
 
 let startGame = () => {
-    console.log('====> HEY WE\'VE HIT START GAME!');
+    console.log('====> HEY WE\'VE HIT RESTART GAME!');
     gameBoard = [
     [{}, {}, {}, {}, {}, {}, {}],
     [{}, {}, {}, {}, {}, {}, {}],
@@ -29,7 +29,7 @@ const createBoard = () => {
         let row = gameBoard[i]
         for (let j = 0; j < row.length; j++) {
             const disc = gameBoard[i][j]
-            const color = disc && disc.color || 'blue'
+            const color = disc && disc.color || 'lightblue'
             gameSlot = gameSlot + `<circle onclick="clickDisc(${j}, ${i})" fill='${color}' r='35px' cx='${j * 90 + 70}px' cy='${i * 90 + 70}px'></circle>`
         }
     }
@@ -37,8 +37,9 @@ const createBoard = () => {
 } 
 
 
+//////////////////  
 
-let currentColor = 'red'
+let colorInPlay = 'red'
 window.clickDisc = (x,y) => {
     if (!gameInPlay) {
         return
@@ -47,12 +48,11 @@ window.clickDisc = (x,y) => {
         let row = gameBoard[i]
         let targetPlace = row[x]
             if (!targetPlace.color) {
-                row[x] = {color: currentColor}
-                // currentColor = currentColor === 'red' ? 'black' : 'red'
-                if (currentColor === 'red') {
-                    currentColor = 'yellow'
+                row[x] = {color: colorInPlay}
+                if (colorInPlay === 'red') {
+                    colorInPlay = 'yellow'
                 } else {
-                    currentColor = 'red'
+                    colorInPlay = 'red'
                 }
                 createBoard()
                 winningMoves()
@@ -78,7 +78,6 @@ function winningMoves() {
                     if (gameBoard[i + 1][j].color === disc.color &&
                         gameBoard[i + 2][j].color === disc.color &&
                         gameBoard[i + 3][j].color === disc.color) {
-                            // console.log(gameBoard)
                             aColorWins(disc.color) 
                             return
                     }
@@ -123,25 +122,27 @@ function winningMoves() {
        }
     }
 
-function aColorWins(color) {
-    gameInPlay = false
-    swal({
-        title: "Good job!",
-        text: "You win this round!",
-        icon: "success",
-        button: "Obv",
-      });
-}
-
+    function aColorWins(color) {
+        gameInPlay = false
+        swal({
+            title: "Victory!",
+            text: "You win this round!",
+            icon: "success",
+            button: "Obv"
+        })
+    }
 }
 
 swal({
-    text: "Are you strong enough for Connect Four?!",
+    title: "Can your friendship survive ... Connect Four?!",
     button: "Yep!"
 })
 .then((value) => {
-  swal("Game On!");
-});
+  swal({
+    title: "Then game on, idealistic fools!",
+    button: "Bring It!"
+})
+})
 
 startGame()
 
