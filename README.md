@@ -10,7 +10,7 @@ CONNECT FOUR!
 
 Gameplay:
 
-We're presented with a grid, the goal being to match four colors in a row before your friend does. Don't feel bad about humiliating them. They propbably have it coming anyway.
+We're presented with a grid, the goal being to match four colors in a row before your friend does. Don't feel bad about humiliating them. They probably have it coming anyway.
 
 Don't forget, though, to think creatively in your quest to crush your enemies. Not only can you achieve this goal by making vertical and horizontal connections, but diagonal ones, as well! They won't even see you coming!
 
