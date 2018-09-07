@@ -62,7 +62,7 @@ const createBoard = () => {
 // will be declared in the next section.   //////////////////////////
 
 
-let move = playerOne
+let moveSwitch = playerOne
 let clickDisc = (x) => {
     if (gameInPlay = false) {
         return false
@@ -71,11 +71,11 @@ let clickDisc = (x) => {
         let row = gameBoard[i]
         let targetPlace = row[x]
             if (!targetPlace.color) {
-                row[x] = {color: move}
-                if (move === playerOne) {
-                    move = playerTwo
+                row[x] = {color: moveSwitch}
+                if (moveSwitch === playerOne) {
+                    moveSwitch = playerTwo
                 } else {
-                    move = playerOne
+                    moveSwitch = playerOne
                 }
                 createBoard()
                 winningMoves()
