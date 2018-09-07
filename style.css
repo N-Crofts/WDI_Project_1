@@ -1,23 +1,18 @@
-
 body {
     background-color: rgb(57, 87, 112);
     background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
-
 
 .jumbotron {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af5af77aed859c2f16c5234900f54ab9&auto=format&fit=crop&w=1050&q=80");
     background-size: cover;
 }
 
-
- 
 .heroic {  
     padding: 1em 0 0 0;
     color: white;
     font-size: 80px;
     font-family: 'Raleway', sans-serif;
-    
 }
 
 .heroicTwo {
@@ -28,41 +23,17 @@ body {
  
  svg {
      width: 680px;
-     height: 700px;
- }   
+     height: 500px;
+}   
 
- #board {
-     display: flex;
-     justify-content: center;
-     animation-name: stretch;
-     animation-duration: 2s; 
-     animation-timing-function: ease-out; 
-     animation-delay: 0;
-     animation-direction: alternate;
-     animation-iteration-count: infinite;
-     animation-fill-mode: none;
-     animation-play-state: running;
- }
-
- @keyframes stretch {
-    0% {
-      transform: scale(1.05);
-      /* border-radius: 100%; */
-    }
-    50% {
-    }
-    100% {
-      transform: scale(1.1);
-    }
-  }
-
- #button {
-    position: absolute;
-    top: 138%;
-    left: 46.5%;
+#button {
+    position: relative;
+    margin: auto;
+    left: 46.5vw;
+    padding: 20px 0 50px 0;
 }
 
- button {
+button {
     height: 40px;
     width: 100px;
     border-radius: 15px;
@@ -70,80 +41,31 @@ body {
     font-weight: lighter;
     color: aliceblue;
     background-color: rgba(0, 0, 0, 0.1);
- }
-/*////////////////////////*/
 
-/* #board {
-  height: 250px;
-  width: 250px;
-  margin: 0 auto;
-  background-color: red;
-  animation-name: stretch;
-  animation-duration: 1.5s; 
-  animation-timing-function: ease-out; 
-  animation-delay: 0;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-fill-mode: none;
-  animation-play-state: running;
+}
+
+/*//////  B O A R D   A N I M A T I O N  //////*/
+
+#board {
+    display: flex;
+    justify-content: center;
+    animation-name: stretch;
+    animation-duration: 2s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
 }
 
 @keyframes stretch {
-  0% {
-    transform: scale(.3);
-    background-color: red;
-    border-radius: 100%;
-  }
-  50% {
-    background-color: orange;
-  }
-  100% {
-    transform: scale(1.5);
-    background-color: yellow;
-  }
+   0% {
+     transform: scale(1.05);
+   }
+   50% {
+   }
+   100% {
+     transform: scale(1.1);
+   }
 }
-
-body,
-html {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center; */
-
-
-
-
-
-
- /* button {
-     height: 30px;
-     width: 60px;
-     position: absolute;
-     left: 52%;
-     top: 91%;
-     font-size: 15px;
- }
-
- h2 {
-     position: absolute;
-     left: 44%;
-     top: 10%;
- }
-
- h1 {
-     position: absolute;
-     left: 45%;
-     top: 15%;
-     font-size: 40px;
-    
- }
- #board {
-     display: flex;
-     flex-flow: column nowrap;
-     align-items: center;
-     justify-content: center
- } */
-
